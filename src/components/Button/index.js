@@ -16,8 +16,6 @@ const Button = styled(ButtonComponent)(
 		boxSizing: 'border-box',
 		display: 'inline-block',
 		textAlign: 'center',
-		border: 'thin',
-		borderRadius: 'base',
 
 		'&:hover:not(:disabled), &:active:not(:disabled), &:focus': {
 			outline: 0,

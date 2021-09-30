@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Console, Hook, Unhook } from 'console-feed'
-import styled from 'styled-components';
-
-const LogsWrapper = styled.div`
-    background-color: rgb(36, 36, 36);
-    position: fixed;
-    bottom: 0;
-    height: 100px;
-    left: 0;
-    right: 0;
-    overflow: auto;
-`;
+import { Box, Flex } from 'components/Layout'
+import Button from 'components/Button'
+import Text from 'components/Text'
 
 const LogsContainer = () => {
   const [logs, setLogs] = useState([])
@@ -23,15 +15,17 @@ const LogsContainer = () => {
       false
     )
 
-    console.log(`Hello console log!`)
-
     return () => Unhook(window.console)
   }, [])
 
   return (
-    <LogsWrapper>
+    <Box position='fixed' bottom='0' left='0' right='0' height='400px' overflow='auto' bg='black'>
+        <Flex justifyContent='space-between' alignItems='center' bg='gray700'>
+          <Text color='white'>Hello console log!</Text>
+          <Button iconName='window-close' onClick={() => setLogs([])}>Clear Log</Button>
+        </Flex>
         <Console logs={logs} variant="dark" />
-    </LogsWrapper>)
+    </Box>)
 }
 
 export default LogsContainer

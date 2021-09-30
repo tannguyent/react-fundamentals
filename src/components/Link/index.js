@@ -1,8 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import css from '@styled-system/css';
 
-export default styled(NavLink)(
+export default styled(Link)(
   css({
     py: 3,
     px: 5,
@@ -11,11 +11,10 @@ export default styled(NavLink)(
     textDecoration: 'none',
     outline: 0,
     cursor: 'pointer',
-    color: 'blue', 
+    color: 'gray900', 
 
     '&:hover:not(:disabled), &:active:not(:disabled), &:focus, &.active': {
-			backgroundColor: 'blue',
-      color: 'white'
+      color: 'blue'
 		}
   })
 )

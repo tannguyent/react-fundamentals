@@ -1,13 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset'
 
 export const GlobalStyles = createGlobalStyle`
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  *, *::after, *::before {
-    box-sizing: border-box;
-  }
+  ${reset}
   body {
     background: ${({ theme }) => theme.colors.gray100};
     color: ${({ theme }) => theme.colors.gray800};

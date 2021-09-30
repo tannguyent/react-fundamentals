@@ -10,11 +10,7 @@ function ListItem(props) {
   );
 }
 
-const MemoListItem = React.memo(ListItem, 
-  // function(prevProps, nextProps){
-  //   return prevProps.id === nextProps.id && prevProps.name === nextProps.name
-  // }
-)
+const MemoListItem = React.memo(ListItem)
 
 function List(props) {
   const numbers = props.data;

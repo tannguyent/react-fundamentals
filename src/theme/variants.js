@@ -38,13 +38,13 @@ export const space = [
 ]
 
 export const fonts = {
-	body: 'Helvetica Neue, Helvetica, Arial, sans-serif',
-	heading: 'Helvetica Neue, Helvetica, Arial, sans-serif',
+	body: 'system-ui, sans-serif',
+	heading: 'system-ui, sans-serif',
 }
 
 export const fontSizes = {
-	xl: '3rem',
-	l: '2rem',
+	xl: '2rem',
+	l: '1.5rem',
 	m: '1rem',
 	s: '0.9rem',
 	xs: '0.75rem',
@@ -55,6 +55,7 @@ export const fontWeights = {
 	normal: 400,
 	bold: 700,
 }
+
 export const lineHeights = {
 	body: 1.5,
 	heading: 1.1,

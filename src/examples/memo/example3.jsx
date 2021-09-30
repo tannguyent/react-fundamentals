@@ -11,9 +11,9 @@ function ListItem(props) {
 }
 
 const MemoListItem = React.memo(ListItem, 
-  // function(prevProps, nextProps){
-  //   return prevProps.id === nextProps.id && prevProps.name === nextProps.name
-  // }
+  function(prevProps, nextProps){
+    return prevProps.id === nextProps.id && prevProps.name === nextProps.name
+  }
 )
 
 function List(props) {
@@ -39,7 +39,7 @@ export default function ReactMemoExample3() {
   const [data, setData] = useState([]);
   const [id, setId] = useState(1);
   
-  function addItemClick() {
+  const addItemClick = () => {
     const item = { id: id, name: "test1" };
     setId(id + 1);
     const newData = data.map(c=>({ id: c.id, name: c.name}));
